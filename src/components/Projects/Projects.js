@@ -78,7 +78,7 @@ function Projects() {
               isBlog={false}
               title="My Porfolio"
               description="Designed and Developed by me to express my personal portfolio."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              ghLink="https://github.com/ceoasim/portfolio"
               demoLink="https://verime.tech/"
             />
           </Col>
