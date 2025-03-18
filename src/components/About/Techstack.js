@@ -8,7 +8,7 @@ import {
   DiMongodb,
   DiPython,
   DiGit,
-  DiJava,
+  DiJava
 } from "react-icons/di";
 import {
   SiRedis,
@@ -20,7 +20,8 @@ import {
   SiTypescript,
   SiSpringboot,
   SiWeb3Dotjs,
-  SiGraphql
+  SiGraphql,
+  SiOpenai,
 } from "react-icons/si";
 import Particle from "../Particle";
 import Toolstack from "./Toolstack";
@@ -34,6 +35,9 @@ function Techstack() {
       </h1>
       <Particle />
       <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        <Col xs={4} md={2} className="tech-icons">
+          <SiOpenai />
+        </Col>
         <Col xs={4} md={2} className="tech-icons">
           <CgCPlusPlus />
         </Col>

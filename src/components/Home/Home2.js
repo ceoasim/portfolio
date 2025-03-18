@@ -19,12 +19,25 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+            As a passionate AI engineer, I specialize in the integration of advanced AI models to build intelligent, scalable, and automated systems that transform user experiences and enhance business operations. My experience spans across Natural Language Processing (NLP), computer vision, predictive analytics, and intelligent search technologies, with a strong focus on leveraging state-of-the-art models such as OpenAI GPT, VideoGen, Gemini, and DeepSeek. 🤷‍♂️
               <br />
-              <br />I am fluent in classics like
+              <br />I am fluent in technologies like
               <i>
-                <b className="purple"> MERN, MEAN, AWS and Java. </b>
+                <b className="purple"> React js, Nodejs, Next js, React Native, GraphQL, Redux, Angular, Vue, Spring boot, Web3. </b>
+              </i>
+              <i>
+                <b className="purple">  Energetic and innovative senior software engineer with 6 years of experience in developing robust code for
+high-volume businesses. An enthusiastic team player and deep creative thinker. Expert in advanced software
+development methodologies, and tools, leading teams, designing and rollout of cutting-edge software solutions.
+Integrated and leveraged advanced AI models such as OpenAI GPT, VideoGen, Gemini, and DeepSeek to enhance
+applications with cutting-edge capabilities in natural language processing, video generation, and data analysis.
+Spearheaded the integration of OpenAI's GPT models for conversational AI, enabling rich and responsive chatbot
+experiences and automated content generation. Utilized VideoGen for AI-driven video creation, streamlining
+multimedia workflows and enhancing user engagement. Worked with Gemini for advanced data processing and
+pattern recognition, optimizing predictive analytics and recommendation systems. Integrated DeepSeek for
+real-time data analysis and intelligent search functionalities, improving decision-making and business insights.
+Successfully implemented API-based integrations, ensuring seamless communication between front-end interfaces
+and backend AI models, while optimizing for performance and scalability. </b>
               </i>
               <br />
               <br />
