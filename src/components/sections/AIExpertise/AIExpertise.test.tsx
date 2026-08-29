@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import AIExpertise from './AIExpertise.jsx'
+import AIExpertise from './AIExpertise.js'
 import { aiCapabilities } from '../../../data/aiExpertise.js'
 
 describe('AIExpertise', () => {

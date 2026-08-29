@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import ResumeCTA from './ResumeCTA.jsx'
+import ResumeCTA from './ResumeCTA.js'
 
 describe('ResumeCTA', () => {
   it('renders a download resume link', () => {

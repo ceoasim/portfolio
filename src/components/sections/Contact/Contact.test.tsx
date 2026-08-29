@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Contact from './Contact.jsx'
+import Contact from './Contact.js'
 
 describe('Contact', () => {
   it('renders the email, LinkedIn, GitHub, and resume links', () => {

@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 
 vi.mock('react-github-calendar', () => ({
-  default: (props) => <div data-testid="calendar" data-username={props.username} />,
+  default: (props: { username: string }) => <div data-testid="calendar" data-username={props.username} />,
 }))
 
-import GithubActivity from './GithubActivity.jsx'
+import { vi } from 'vitest'
+import GithubActivity from './GithubActivity.js'
 
 describe('GithubActivity', () => {
   it('renders the calendar with the correct username', () => {
