@@ -1,7 +1,9 @@
+import type { AICapability } from '../types/content.js'
+
 export const aiFraming =
   'I build products on top of frontier models, not just around an API call.'
 
-export const aiCapabilities = [
+export const aiCapabilities: AICapability[] = [
   {
     label: 'LLM Integration',
     items: ['Anthropic Claude', 'OpenAI GPT-4/4o', 'Google Gemini', 'DeepSeek', 'Llama'],

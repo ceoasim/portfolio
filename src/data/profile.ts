@@ -1,4 +1,6 @@
-export const profile = {
+import type { Profile } from '../types/content.js'
+
+export const profile: Profile = {
   name: 'Muhammad Asim',
   location: 'Lahore, Pakistan',
   email: 'asimm364@gmail.com',

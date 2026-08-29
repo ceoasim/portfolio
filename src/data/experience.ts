@@ -1,4 +1,6 @@
-export const experience = [
+import type { ExperienceEntry, Education } from '../types/content.js'
+
+export const experience: ExperienceEntry[] = [
   {
     company: 'SMS Holdings',
     role: 'Senior Software Engineer',
@@ -43,7 +45,7 @@ export const experience = [
   },
 ]
 
-export const education = {
+export const education: Education = {
   degree: 'BS Software Engineering',
   school: 'Lahore Garrison University',
   detail: 'CGPA 3.4 / 4.0',

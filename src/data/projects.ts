@@ -1,10 +1,11 @@
+import type { Project } from '../types/content.js'
 import miner from '../Assets/Projects/miner.png'
 import ivy from '../Assets/Projects/ivy.png'
 import nft from '../Assets/Projects/nft.png'
 import door from '../Assets/Projects/door.png'
 import shift from '../Assets/Projects/shift.png'
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 'anywork-agent',
     name: 'AnyWork Agent',
