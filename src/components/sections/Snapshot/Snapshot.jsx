@@ -6,6 +6,7 @@ function Snapshot() {
   return (
     <SectionReveal as="section" className="px-6 py-24" delay={0}>
       <div id="snapshot" className="mx-auto max-w-4xl scroll-mt-24 text-center">
+        <h2 className="sr-only">About</h2>
         <p className="text-lg text-muted">{profile.snapshotSupportingCopy}</p>
         <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4">
           {profile.stats.map((stat) => (

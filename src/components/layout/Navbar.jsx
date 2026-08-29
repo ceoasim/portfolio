@@ -30,6 +30,8 @@ function Navbar() {
         <button
           type="button"
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-nav-menu"
           onClick={() => setOpen((o) => !o)}
           className="text-primary md:hidden"
         >
@@ -37,7 +39,11 @@ function Navbar() {
         </button>
       </nav>
       {open && (
-        <ul data-testid="mobile-menu" className="flex flex-col gap-4 border-t border-subtle px-6 py-4 md:hidden">
+        <ul
+          id="mobile-nav-menu"
+          data-testid="mobile-menu"
+          className="flex flex-col gap-4 border-t border-subtle px-6 py-4 md:hidden"
+        >
           {LINKS.map((link) => (
             <li key={link.href}>
               <a

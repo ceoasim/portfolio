@@ -14,6 +14,12 @@ import Contact from './components/sections/Contact/index.js'
 function App() {
   return (
     <MotionConfig reducedMotion="user">
+      <a
+        href="#hero"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-surface focus:text-primary focus:p-4"
+      >
+        Skip to content
+      </a>
       <Navbar />
       <main>
         <Hero />
