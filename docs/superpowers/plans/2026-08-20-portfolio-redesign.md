@@ -2583,6 +2583,7 @@ Expected: FAIL — `App.jsx` still renders only the placeholder.
 - [ ] **Step 3: Rewrite `App.jsx`**
 
 ```jsx
+import { MotionConfig } from 'framer-motion'
 import Navbar from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
 import Hero from './components/sections/Hero/index.js'
@@ -2597,7 +2598,7 @@ import Contact from './components/sections/Contact/index.js'
 
 function App() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Navbar />
       <main>
         <Hero />
@@ -2611,12 +2612,14 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </MotionConfig>
   )
 }
 
 export default App
 ```
+
+`MotionConfig reducedMotion="user"` is Framer Motion's built-in mechanism for the Global Constraint "all animation must respect `prefers-reduced-motion`" — applied once at the root, it automatically simplifies every `animate`/`whileInView` transform-based animation in the tree (MagneticButton's offset, SpotlightCard's tilt, HeroVisual's floating nodes, Timeline's scale-in) for users with the OS-level reduced-motion preference, without needing a bespoke `matchMedia` check in each component.
 
 - [ ] **Step 4: Run test to verify it passes**
 
@@ -2743,7 +2746,7 @@ Confirm `text-muted` (`#9497bd`) on `bg-base` (`#0d0f1a`) and `bg-surface` (`#15
 
 - [ ] **Step 4: Confirm `prefers-reduced-motion` behavior**
 
-In browser dev tools, emulate `prefers-reduced-motion: reduce` and reload. Confirm: `AmbientGlow` is hidden (`motion-reduce:hidden` from Task 8), `HeroVisual`'s floating nodes are visibly calmer (`motion-reduce:opacity-80` from Task 10 — if node motion still feels excessive under reduced motion, wrap the `animate` prop in a check against `window.matchMedia('(prefers-reduced-motion: reduce)').matches` and skip the animation entirely), and scroll behavior is instant, not smooth (already handled by the CSS media query in Task 2).
+In browser dev tools, emulate `prefers-reduced-motion: reduce` and reload. Confirm: `AmbientGlow` is hidden (`motion-reduce:hidden` from Task 8), `HeroVisual`'s floating nodes stop animating and `MagneticButton`/`SpotlightCard` stop offsetting toward the cursor (all handled globally by `MotionConfig reducedMotion="user"` in Task 18 — if any of these still animate, the bug is that the affected component sits outside the `MotionConfig` tree, not a missing per-component check), and scroll behavior is instant, not smooth (already handled by the CSS media query in Task 2).
 
 - [ ] **Step 5: Verify all images have alt text**
 
