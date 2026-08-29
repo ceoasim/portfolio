@@ -32,18 +32,17 @@ My personal portfolio <a href="https://devasim.vercel.app/" target="_blank">deva
 
 This project was built using these technologies.
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
+- Vite
+- React 18
+- Tailwind CSS
+- Framer Motion
 - Vercel
 
 ## Features
 
-**📖 Multi-Page Layout**
+**📖 Single-Page Scroll Layout**
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+**🎨 Styled with Tailwind CSS, animated with Framer Motion**
 
 **📱 Fully Responsive**
 
@@ -55,11 +54,16 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 
 1. Installation: `npm install`
 
-2. In the project directory, you can run: `npm start`
+2. In the project directory, you can run: `npm run dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+Runs the app in development mode with hot module reload.\
+Open the local URL printed in your terminal (Vite defaults to [http://localhost:5173](http://localhost:5173)) to view it in the browser.
+
+Other available scripts:
+
+- `npm run build` — builds the app for production into `dist/`
+- `npm run preview` — serves the production build locally
+- `npm run test` — runs the test suite
 
 ## Usage Instructions
 
