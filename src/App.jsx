@@ -1,7 +1,7 @@
 function App() {
   return (
-    <main className="min-h-screen bg-[#0d0f1a] text-[#eceef5]">
-      <p className="p-8">Portfolio rebuild in progress.</p>
+    <main className="min-h-screen bg-base text-primary font-sans">
+      <p className="p-8 font-mono text-accent-violet">Portfolio rebuild in progress.</p>
     </main>
   )
 }
