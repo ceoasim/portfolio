@@ -1,7 +1,13 @@
-import AbstractProjectVisual from './AbstractProjectVisual.jsx'
+import AbstractProjectVisual from './AbstractProjectVisual.js'
 import TechBadge from '../../ui/TechBadge.js'
+import type { Project } from '../../../types/content.js'
 
-function FeaturedProjectCard({ project, reverse }) {
+interface FeaturedProjectCardProps {
+  project: Project
+  reverse: boolean
+}
+
+function FeaturedProjectCard({ project, reverse }: FeaturedProjectCardProps) {
   return (
     <div className={`grid items-center gap-10 md:grid-cols-2 ${reverse ? 'md:[&>*:first-child]:order-2' : ''}`}>
       <div>

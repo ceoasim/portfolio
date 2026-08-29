@@ -1,7 +1,7 @@
 import { projects } from '../../../data/projects.js'
 import SectionReveal from '../../ui/SectionReveal.js'
-import FeaturedProjectCard from './FeaturedProjectCard.jsx'
-import ProjectCard from './ProjectCard.jsx'
+import FeaturedProjectCard from './FeaturedProjectCard.js'
+import ProjectCard from './ProjectCard.js'
 
 function Projects() {
   const featured = projects.filter((p) => p.featured)

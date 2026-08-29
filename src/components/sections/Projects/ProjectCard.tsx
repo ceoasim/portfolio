@@ -1,8 +1,13 @@
 import SpotlightCard from '../../ui/SpotlightCard.js'
 import TechBadge from '../../ui/TechBadge.js'
-import AbstractProjectVisual from './AbstractProjectVisual.jsx'
+import AbstractProjectVisual from './AbstractProjectVisual.js'
+import type { Project } from '../../../types/content.js'
 
-function ProjectCard({ project }) {
+interface ProjectCardProps {
+  project: Project
+}
+
+function ProjectCard({ project }: ProjectCardProps) {
   return (
     <SpotlightCard className="flex h-full flex-col p-5">
       {project.image ? (

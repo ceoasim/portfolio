@@ -1,6 +1,10 @@
 import TechBadge from '../../ui/TechBadge.js'
 
-function AbstractProjectVisual({ tags }) {
+interface AbstractProjectVisualProps {
+  tags: string[]
+}
+
+function AbstractProjectVisual({ tags }: AbstractProjectVisualProps) {
   return (
     <div
       className="flex h-full min-h-[220px] flex-wrap content-center items-center justify-center gap-2 rounded-lg p-8"

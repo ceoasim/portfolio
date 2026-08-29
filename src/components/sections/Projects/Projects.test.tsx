@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Projects from './Projects.jsx'
+import Projects from './Projects.js'
 import { projects } from '../../../data/projects.js'
 
 describe('Projects', () => {
