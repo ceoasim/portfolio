@@ -6,7 +6,13 @@ function FeaturedProjectCard({ project, reverse }) {
     <div className={`grid items-center gap-10 md:grid-cols-2 ${reverse ? 'md:[&>*:first-child]:order-2' : ''}`}>
       <div>
         {project.image ? (
-          <img src={project.image} alt={`${project.name} screenshot`} className="rounded-lg border border-subtle" />
+          <img
+            src={project.image}
+            alt={`${project.name} screenshot`}
+            loading="lazy"
+            decoding="async"
+            className="aspect-[16/9] w-full rounded-lg border border-subtle object-cover"
+          />
         ) : (
           <AbstractProjectVisual tags={project.tags} />
         )}
@@ -19,11 +25,13 @@ function FeaturedProjectCard({ project, reverse }) {
         {project.architectureHighlight && (
           <p className="mt-3 text-sm text-muted">{project.architectureHighlight}</p>
         )}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <TechBadge key={tag} label={tag} />
-          ))}
-        </div>
+        {project.image && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <TechBadge key={tag} label={tag} />
+            ))}
+          </div>
+        )}
         {project.demoUrl && (
           <a
             href={project.demoUrl}
