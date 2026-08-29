@@ -6,3 +6,6 @@
 
 # brainstorming visual companion
 /.superpowers
+
+# macOS Finder metadata
+.DS_Store
