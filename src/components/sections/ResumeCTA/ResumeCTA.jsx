@@ -9,10 +9,10 @@ function ResumeCTA() {
         <h2 className="text-2xl font-bold">Want the full picture?</h2>
         <p className="mt-3 text-muted">Download the resume for the complete role-by-role breakdown.</p>
         <div className="mt-8 flex justify-center gap-4">
-          <MagneticButton href={resumePdf} variant="primary">
+          <MagneticButton href={resumePdf} variant="primary" download="Muhammad_Asim_Resume.pdf">
             Download Resume
           </MagneticButton>
-          <MagneticButton href={resumePdf} variant="secondary">
+          <MagneticButton href={resumePdf} variant="secondary" target="_blank" rel="noreferrer">
             View Resume
           </MagneticButton>
         </div>

@@ -9,7 +9,7 @@ const variants = {
   secondary: 'border border-subtle text-primary',
 }
 
-function MagneticButton({ href, variant = 'primary', onClick, children }) {
+function MagneticButton({ href, variant = 'primary', onClick, children, ...rest }) {
   const ref = useRef(null)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
 
@@ -33,6 +33,7 @@ function MagneticButton({ href, variant = 'primary', onClick, children }) {
       animate={{ x: offset.x, y: offset.y }}
       transition={{ type: 'spring', stiffness: 200, damping: 15 }}
       className={`${base} ${variants[variant]}`}
+      {...rest}
     >
       {children}
     </motion.a>

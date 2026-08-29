@@ -31,7 +31,7 @@ function Hero() {
             <MagneticButton href="#projects" variant="primary">
               View My Work
             </MagneticButton>
-            <MagneticButton href={resumePdf} variant="secondary">
+            <MagneticButton href={resumePdf} variant="secondary" download="Muhammad_Asim_Resume.pdf">
               Download Resume
             </MagneticButton>
           </div>

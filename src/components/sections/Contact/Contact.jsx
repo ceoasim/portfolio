@@ -13,13 +13,13 @@ function Contact() {
           <MagneticButton href={`mailto:${profile.email}`} variant="primary">
             Email
           </MagneticButton>
-          <MagneticButton href={profile.linkedin} variant="secondary">
+          <MagneticButton href={profile.linkedin} variant="secondary" target="_blank" rel="noreferrer">
             LinkedIn
           </MagneticButton>
-          <MagneticButton href={profile.github} variant="secondary">
+          <MagneticButton href={profile.github} variant="secondary" target="_blank" rel="noreferrer">
             GitHub
           </MagneticButton>
-          <MagneticButton href={resumePdf} variant="secondary">
+          <MagneticButton href={resumePdf} variant="secondary" download="Muhammad_Asim_Resume.pdf">
             Resume
           </MagneticButton>
         </div>
