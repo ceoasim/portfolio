@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import Timeline from './Timeline.jsx'
 
@@ -9,11 +9,13 @@ const entries = [
 
 describe('Timeline', () => {
   it('renders every entry company, role, and bullets', () => {
-    render(<Timeline entries={entries} />)
-    entries.forEach((e) => {
-      // Check for the combination of role and company
-      expect(screen.getByText(new RegExp(`${e.role}.*${e.company}`))).toBeInTheDocument()
-      e.bullets.forEach((b) => expect(screen.getByText(b)).toBeInTheDocument())
+    const { container } = render(<Timeline entries={entries} />)
+    const listItems = container.querySelectorAll('ol > li')
+    entries.forEach((e, index) => {
+      const item = listItems[index]
+      expect(within(item).getByText(e.company)).toBeInTheDocument()
+      expect(within(item).getByText(e.role)).toBeInTheDocument()
+      e.bullets.forEach((b) => expect(within(item).getByText(b)).toBeInTheDocument())
     })
   })
 })

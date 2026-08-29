@@ -13,7 +13,7 @@ function Experience() {
           <Timeline entries={experience} />
         </div>
         <p className="mt-8 border-l border-subtle pl-8 text-sm text-muted">
-          {education.degree} — {education.school} · {education.detail}
+          <span>{education.degree}</span> — <span>{education.school}</span> · <span>{education.detail}</span>
         </p>
       </div>
     </SectionReveal>

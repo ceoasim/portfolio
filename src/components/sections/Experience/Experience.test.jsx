@@ -6,7 +6,7 @@ import { education } from '../../../data/experience.js'
 describe('Experience', () => {
   it('renders the education entry at the end', () => {
     render(<Experience />)
-    expect(screen.getByText(new RegExp(education.school))).toBeInTheDocument()
+    expect(screen.getByText(education.school)).toBeInTheDocument()
   })
 
   it('has id="experience"', () => {

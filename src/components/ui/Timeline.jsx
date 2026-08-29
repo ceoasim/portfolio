@@ -16,7 +16,7 @@ function Timeline({ entries }) {
             {entry.start} – {entry.end}
           </p>
           <h3 className="mt-1 text-lg font-bold">
-            {entry.role} · {entry.company}
+            <span>{entry.role}</span> · <span>{entry.company}</span>
           </h3>
           <ul className="mt-3 space-y-2 text-sm text-muted">
             {entry.bullets.map((bullet) => (
