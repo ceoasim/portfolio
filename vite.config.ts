@@ -9,13 +9,16 @@ export default defineConfig({
     {
       name: 'resolve-js-to-ts',
       async resolveId(id, importer) {
-        // If the import ends with .js and is a relative path, check if a .ts file exists
+        // If the import ends with .js and is a relative path, check if a .ts or .tsx file exists
         if (id.endsWith('.js') && (id.startsWith('./') || id.startsWith('../'))) {
           const resolvedPath = importer ? path.resolve(path.dirname(importer), id) : id
-          const tsPath = resolvedPath.slice(0, -3) + '.ts'
+          const basePath = resolvedPath.slice(0, -3)
           try {
-            if (fs.existsSync(tsPath)) {
-              return tsPath
+            if (fs.existsSync(basePath + '.ts')) {
+              return basePath + '.ts'
+            }
+            if (fs.existsSync(basePath + '.tsx')) {
+              return basePath + '.tsx'
             }
           } catch {
             // Continue with normal resolution
