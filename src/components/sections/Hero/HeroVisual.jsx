@@ -21,6 +21,7 @@ function HeroVisual() {
           key={i}
           cx={n.x} cy={n.y} r={5}
           fill={i % 2 === 0 ? '#8b7bff' : '#25c9d0'}
+          initial={{ cy: n.y }}
           animate={{ cy: [n.y, n.y - 8, n.y] }}
           transition={{ duration: 4 + i, repeat: Infinity, ease: 'easeInOut' }}
         />
