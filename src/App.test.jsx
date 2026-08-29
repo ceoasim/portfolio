@@ -3,8 +3,10 @@ import { describe, it, expect } from 'vitest'
 import App from './App.jsx'
 
 describe('App', () => {
-  it('renders the placeholder main content', () => {
+  it('renders every top-level section in order', () => {
     render(<App />)
-    expect(screen.getByText(/Portfolio rebuild in progress/i)).toBeInTheDocument()
+    const ids = ['hero', 'snapshot', 'skills', 'projects', 'experience', 'ai', 'github-activity', 'resume', 'contact']
+    const rendered = ids.map((id) => document.getElementById(id))
+    rendered.forEach((el) => expect(el).toBeInTheDocument())
   })
 })
