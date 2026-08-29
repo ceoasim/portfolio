@@ -1,6 +1,6 @@
 import GitHubCalendar from 'react-github-calendar'
 import { profile } from '../../../data/profile.js'
-import SectionReveal from '../../ui/SectionReveal.jsx'
+import SectionReveal from '../../ui/SectionReveal.js'
 
 function GithubActivity() {
   return (

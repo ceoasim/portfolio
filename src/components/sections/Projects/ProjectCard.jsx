@@ -1,5 +1,5 @@
-import SpotlightCard from '../../ui/SpotlightCard.jsx'
-import TechBadge from '../../ui/TechBadge.jsx'
+import SpotlightCard from '../../ui/SpotlightCard.js'
+import TechBadge from '../../ui/TechBadge.js'
 import AbstractProjectVisual from './AbstractProjectVisual.jsx'
 
 function ProjectCard({ project }) {

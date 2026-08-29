@@ -1,5 +1,5 @@
 import AbstractProjectVisual from './AbstractProjectVisual.jsx'
-import TechBadge from '../../ui/TechBadge.jsx'
+import TechBadge from '../../ui/TechBadge.js'
 
 function FeaturedProjectCard({ project, reverse }) {
   return (

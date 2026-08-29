@@ -15,6 +15,6 @@ describe('getCountUpValue', () => {
   })
 
   it('interpolates and rounds at the halfway point', () => {
-    expect(getCountUpValue(500, 1000, 7)).toBe(4) // 3.5 rounds to 4
+    expect(getCountUpValue(500, 1000, 7)).toBe(4)
   })
 })

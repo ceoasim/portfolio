@@ -1,6 +1,6 @@
 import { profile } from '../../../data/profile.js'
-import SectionReveal from '../../ui/SectionReveal.jsx'
-import StatCounter from '../../ui/StatCounter.jsx'
+import SectionReveal from '../../ui/SectionReveal.js'
+import StatCounter from '../../ui/StatCounter.js'
 
 function Snapshot() {
   return (

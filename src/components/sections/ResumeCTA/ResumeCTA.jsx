@@ -1,5 +1,5 @@
-import SectionReveal from '../../ui/SectionReveal.jsx'
-import MagneticButton from '../../ui/MagneticButton.jsx'
+import SectionReveal from '../../ui/SectionReveal.js'
+import MagneticButton from '../../ui/MagneticButton.js'
 import resumePdf from '../../../Assets/muhammad_asim_resume.pdf'
 
 function ResumeCTA() {

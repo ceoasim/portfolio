@@ -1,5 +1,5 @@
 import { projects } from '../../../data/projects.js'
-import SectionReveal from '../../ui/SectionReveal.jsx'
+import SectionReveal from '../../ui/SectionReveal.js'
 import FeaturedProjectCard from './FeaturedProjectCard.jsx'
 import ProjectCard from './ProjectCard.jsx'
 

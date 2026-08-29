@@ -1,4 +1,4 @@
-import TechBadge from '../../ui/TechBadge.jsx'
+import TechBadge from '../../ui/TechBadge.js'
 
 function AbstractProjectVisual({ tags }) {
   return (

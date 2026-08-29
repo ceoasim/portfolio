@@ -1,13 +1,18 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { computeTilt } from './tiltOffset.js'
 
-function SpotlightCard({ className = '', children }) {
-  const ref = useRef(null)
+interface SpotlightCardProps {
+  className?: string
+  children: ReactNode
+}
+
+function SpotlightCard({ className = '', children }: SpotlightCardProps) {
+  const ref = useRef<HTMLDivElement>(null)
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 })
   const [spot, setSpot] = useState({ x: '50%', y: '50%', opacity: 0 })
 
-  function handleMouseMove(e) {
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
     if (!ref.current) return
     const rect = ref.current.getBoundingClientRect()
     setTilt(computeTilt(rect, e.clientX, e.clientY))

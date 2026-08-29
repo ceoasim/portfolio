@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, type AnchorHTMLAttributes, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { computeMagneticOffset } from './magneticOffset.js'
 
@@ -9,11 +9,17 @@ const variants = {
   secondary: 'border border-subtle text-primary',
 }
 
-function MagneticButton({ href, variant = 'primary', onClick, children, ...rest }) {
-  const ref = useRef(null)
+interface MagneticButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string
+  variant?: keyof typeof variants
+  children: ReactNode
+}
+
+function MagneticButton({ href, variant = 'primary', onClick, children, ...rest }: MagneticButtonProps) {
+  const ref = useRef<HTMLAnchorElement>(null)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
 
-  function handleMouseMove(e) {
+  function handleMouseMove(e: React.MouseEvent<HTMLAnchorElement>) {
     if (!ref.current) return
     const rect = ref.current.getBoundingClientRect()
     setOffset(computeMagneticOffset(rect, e.clientX, e.clientY))

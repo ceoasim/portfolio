@@ -1,4 +1,3 @@
-// src/components/ui/tiltOffset.test.js
 import { describe, it, expect } from 'vitest'
 import { computeTilt } from './tiltOffset.js'
 
@@ -10,20 +9,16 @@ describe('computeTilt', () => {
   })
 
   it('tilts toward the cursor, capped at maxDeg', () => {
-    // cursor at top-right corner
     const result = computeTilt(rect, 100, 0, 8)
     expect(result.rotateX).toBe(8)
     expect(result.rotateY).toBe(8)
   })
 
   it('clamps to maxDeg when the cursor is reported outside the card bounds', () => {
-    // e.g. a fast mouse movement reporting coordinates just past the
-    // bottom-right corner right before mouseleave fires.
     const result = computeTilt(rect, 150, 140, 8)
     expect(result.rotateX).toBe(-8)
     expect(result.rotateY).toBe(8)
 
-    // and well past the top-left corner
     const result2 = computeTilt(rect, -50, -40, 8)
     expect(result2.rotateX).toBe(8)
     expect(result2.rotateY).toBe(-8)

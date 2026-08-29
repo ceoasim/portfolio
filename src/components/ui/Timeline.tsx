@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion'
-import TechBadge from './TechBadge.jsx'
+import TechBadge from './TechBadge.js'
+import type { ExperienceEntry } from '../../types/content.js'
 
-function Timeline({ entries }) {
+interface TimelineProps {
+  entries: ExperienceEntry[]
+}
+
+function Timeline({ entries }: TimelineProps) {
   return (
     <ol className="relative border-l border-subtle pl-8">
       {entries.map((entry) => (

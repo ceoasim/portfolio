@@ -1,6 +1,6 @@
 import { skillGroups } from '../../../data/skills.js'
-import SectionReveal from '../../ui/SectionReveal.jsx'
-import TechBadge from '../../ui/TechBadge.jsx'
+import SectionReveal from '../../ui/SectionReveal.js'
+import TechBadge from '../../ui/TechBadge.js'
 
 function Skills() {
   return (

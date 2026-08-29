@@ -1,6 +1,6 @@
 import { experience, education } from '../../../data/experience.js'
-import SectionReveal from '../../ui/SectionReveal.jsx'
-import Timeline from '../../ui/Timeline.jsx'
+import SectionReveal from '../../ui/SectionReveal.js'
+import Timeline from '../../ui/Timeline.js'
 
 function Experience() {
   return (

@@ -1,3 +1,4 @@
+import type { ElementType, ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
 const variants = {
@@ -5,8 +6,15 @@ const variants = {
   visible: { opacity: 1, y: 0 },
 }
 
-function SectionReveal({ as = 'div', className = '', delay = 0, children }) {
-  const MotionTag = motion[as] ?? motion.div
+interface SectionRevealProps {
+  as?: ElementType
+  className?: string
+  delay?: number
+  children: ReactNode
+}
+
+function SectionReveal({ as = 'div', className = '', delay = 0, children }: SectionRevealProps) {
+  const MotionTag = (motion as Record<string, ElementType>)[as as string] ?? motion.div
   return (
     <MotionTag
       className={className}

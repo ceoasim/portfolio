@@ -1,4 +1,3 @@
-// src/components/ui/TechBadge.test.jsx
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import TechBadge from './TechBadge.jsx'

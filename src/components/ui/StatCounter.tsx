@@ -4,8 +4,14 @@ import { getCountUpValue } from './countUp.js'
 
 const DURATION_MS = 1200
 
-function StatCounter({ value, suffix = '', label }) {
-  const ref = useRef(null)
+interface StatCounterProps {
+  value: number
+  suffix?: string
+  label: string
+}
+
+function StatCounter({ value, suffix = '', label }: StatCounterProps) {
+  const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.5 })
   const [display, setDisplay] = useState(0)
   const shouldReduceMotion = useReducedMotion()
@@ -16,9 +22,9 @@ function StatCounter({ value, suffix = '', label }) {
       setDisplay(value)
       return
     }
-    let start
-    let frame
-    function tick(timestamp) {
+    let start: number | undefined
+    let frame: number
+    function tick(timestamp: number) {
       if (start === undefined) start = timestamp
       const elapsed = timestamp - start
       setDisplay(getCountUpValue(elapsed, DURATION_MS, value))
