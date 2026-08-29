@@ -9,7 +9,7 @@ const variants = {
   secondary: 'border border-subtle text-primary',
 }
 
-interface MagneticButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface MagneticButtonProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'onAnimationStart' | 'onDrag' | 'onDragEnd' | 'onDragStart'> {
   href: string
   variant?: keyof typeof variants
   children: ReactNode

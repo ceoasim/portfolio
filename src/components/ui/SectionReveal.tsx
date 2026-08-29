@@ -14,7 +14,7 @@ interface SectionRevealProps {
 }
 
 function SectionReveal({ as = 'div', className = '', delay = 0, children }: SectionRevealProps) {
-  const MotionTag = (motion as Record<string, ElementType>)[as as string] ?? motion.div
+  const MotionTag = (motion as unknown as Record<string, ElementType>)[as as string] ?? motion.div
   return (
     <MotionTag
       className={className}
