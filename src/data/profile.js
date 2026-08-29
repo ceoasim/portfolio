@@ -1,6 +1,5 @@
 export const profile = {
   name: 'Muhammad Asim',
-  title: 'Senior Software Engineer — AI-Native Full-Stack Development',
   location: 'Lahore, Pakistan',
   email: 'asimm364@gmail.com',
   linkedin: 'https://linkedin.com/in/ceoasim',
