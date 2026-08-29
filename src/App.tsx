@@ -1,6 +1,6 @@
 import { MotionConfig } from 'framer-motion'
-import Navbar from './components/layout/Navbar.jsx'
-import Footer from './components/layout/Footer.jsx'
+import Navbar from './components/layout/Navbar.js'
+import Footer from './components/layout/Footer.js'
 import Hero from './components/sections/Hero/index.js'
 import Snapshot from './components/sections/Snapshot/index.js'
 import Skills from './components/sections/Skills/index.js'

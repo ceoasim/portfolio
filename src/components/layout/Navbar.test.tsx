@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Navbar from './Navbar.jsx'
+import Navbar from './Navbar.js'
 
 describe('Navbar', () => {
   it('renders anchor links for every section', () => {

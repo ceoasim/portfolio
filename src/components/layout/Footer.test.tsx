@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Footer from './Footer.jsx'
+import Footer from './Footer.js'
 
 describe('Footer', () => {
   it('links to GitHub and LinkedIn only', () => {
