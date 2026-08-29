@@ -9,12 +9,12 @@ function Experience() {
         <h2 className="text-2xl font-bold">
           Professional <span className="text-accent-violet">Experience</span>
         </h2>
-        <div className="mt-10">
+        <div className="mt-10 border-l border-subtle">
           <Timeline entries={experience} />
+          <p className="mt-8 pl-8 text-sm text-muted">
+            <span>{education.degree}</span> — <span>{education.school}</span> · <span>{education.detail}</span>
+          </p>
         </div>
-        <p className="mt-8 border-l border-subtle pl-8 text-sm text-muted">
-          <span>{education.degree}</span> — <span>{education.school}</span> · <span>{education.detail}</span>
-        </p>
       </div>
     </SectionReveal>
   )
