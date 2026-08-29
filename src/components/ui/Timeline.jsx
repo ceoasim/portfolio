@@ -5,7 +5,7 @@ function Timeline({ entries }) {
   return (
     <ol className="relative border-l border-subtle pl-8">
       {entries.map((entry) => (
-        <li key={entry.company} className="mb-12 last:mb-0">
+        <li key={`${entry.company}-${entry.start}`} className="mb-12 last:mb-0">
           <motion.span
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
