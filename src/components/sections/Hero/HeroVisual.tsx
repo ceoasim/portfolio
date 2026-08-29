@@ -4,12 +4,9 @@ const NODES = [
   { x: 60, y: 40 }, { x: 180, y: 20 }, { x: 220, y: 120 },
   { x: 100, y: 160 }, { x: 20, y: 110 }, { x: 150, y: 90 },
 ]
-const EDGES = [[0, 1], [1, 2], [2, 5], [5, 0], [0, 4], [4, 3], [3, 5]]
+const EDGES: [number, number][] = [[0, 1], [1, 2], [2, 5], [5, 0], [0, 4], [4, 3], [3, 5]]
 
 function HeroVisual() {
-  // `cy` is an SVG attribute, not a transform value, so MotionConfig's
-  // reducedMotion="user" (which only short-circuits transform/positional
-  // keys) does not cover it — check explicitly and freeze the keyframes.
   const shouldReduceMotion = useReducedMotion()
 
   return (
@@ -18,7 +15,7 @@ function HeroVisual() {
         <line
           key={i}
           x1={NODES[a].x} y1={NODES[a].y} x2={NODES[b].x} y2={NODES[b].y}
-          stroke="#8b7bff" strokeOpacity="0.35" strokeWidth="1"
+          stroke="#8b7bff" strokeOpacity={0.35} strokeWidth={1}
         />
       ))}
       {NODES.map((n, i) => (

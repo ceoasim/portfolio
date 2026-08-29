@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Snapshot from './Snapshot.jsx'
+import Snapshot from './Snapshot.js'
 import { profile } from '../../../data/profile.js'
 
 describe('Snapshot', () => {

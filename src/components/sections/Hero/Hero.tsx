@@ -5,7 +5,7 @@ import { MdOutlineEmail } from 'react-icons/md'
 import { profile } from '../../../data/profile.js'
 import MagneticButton from '../../ui/MagneticButton.js'
 import AmbientGlow from '../../ui/AmbientGlow.jsx'
-import HeroVisual from './HeroVisual.jsx'
+import HeroVisual from './HeroVisual.js'
 import resumePdf from '../../../Assets/muhammad_asim_resume.pdf'
 
 function Hero() {

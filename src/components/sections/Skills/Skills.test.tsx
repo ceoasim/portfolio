@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Skills from './Skills.jsx'
+import Skills from './Skills.js'
 import { skillGroups } from '../../../data/skills.js'
 
 describe('Skills', () => {

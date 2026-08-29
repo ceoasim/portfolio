@@ -1,7 +1,6 @@
-// src/components/sections/Hero/Hero.test.jsx
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Hero from './Hero.jsx'
+import Hero from './Hero.js'
 
 describe('Hero', () => {
   it('renders the name, title, and both CTAs with correct targets', () => {
