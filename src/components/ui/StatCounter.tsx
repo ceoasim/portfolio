@@ -36,7 +36,7 @@ function StatCounter({ value, suffix = '', label }: StatCounterProps) {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-sans text-4xl font-bold text-accent-violet">
+      <div className="font-sans text-4xl font-bold text-accent">
         {display}
         {suffix}
       </div>
