@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import App from './App.jsx'
+import App from './App.js'
 
 describe('App', () => {
   it('renders every top-level section in order', () => {

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import MagneticButton from './MagneticButton.jsx'
+import MagneticButton from './MagneticButton.js'
 
 describe('MagneticButton', () => {
   it('renders an anchor with the given label and href', () => {

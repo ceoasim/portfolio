@@ -8,7 +8,7 @@ export default {
         border: '#d9cdb6',
         ink: '#262019',
         muted: '#5c5344',
-        accent: '#a8552b',
+        accent: '#964a24',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],

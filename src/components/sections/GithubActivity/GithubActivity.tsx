@@ -12,7 +12,7 @@ function GithubActivity() {
         <div className="mt-8 flex justify-center">
           <GitHubCalendar
             username={profile.githubUsername}
-            color="#a8552b"
+            color="#964a24"
             blockSize={12}
             blockMargin={4}
             fontSize={14}

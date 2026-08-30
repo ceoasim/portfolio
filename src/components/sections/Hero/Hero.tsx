@@ -41,6 +41,7 @@ function Hero() {
           <img
             src={profilePhoto}
             alt={profile.name}
+            fetchPriority="high"
             className="aspect-[4/5] w-full rounded-lg border border-border object-cover"
             style={{ filter: 'sepia(0.15) contrast(1.02)' }}
           />

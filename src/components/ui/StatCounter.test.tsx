@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import StatCounter from './StatCounter.jsx'
+import StatCounter from './StatCounter.js'
 
 describe('StatCounter', () => {
   it('renders the label and starts at 0 before animating', () => {

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import SectionReveal from './SectionReveal.jsx'
+import SectionReveal from './SectionReveal.js'
 
 describe('SectionReveal', () => {
   it('renders children inside the given tag', () => {
