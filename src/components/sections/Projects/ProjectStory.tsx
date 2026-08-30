@@ -49,6 +49,20 @@ function ProjectStory({ project }: ProjectStoryProps) {
           Screenshot coming soon
         </div>
       )}
+      {project.additionalImages && project.additionalImages.length > 0 && (
+        <div className="grid gap-px bg-border sm:grid-cols-2">
+          {project.additionalImages.map((src) => (
+            <img
+              key={src}
+              src={src}
+              alt={`${project.name} screenshot`}
+              loading="lazy"
+              decoding="async"
+              className="aspect-[16/10] w-full bg-surface object-cover"
+            />
+          ))}
+        </div>
+      )}
       {BEATS.map(({ key, label }, i) => {
         const text = project[key]
         if (!text) return null

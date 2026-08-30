@@ -1,4 +1,7 @@
 import type { Project } from '../types/content.js'
+import stackleadAnalytics from '../Assets/Projects/stacklead-analytics.png'
+import stackleadCampaigns from '../Assets/Projects/stacklead-campaigns.png'
+import stackleadJobs from '../Assets/Projects/stacklead-jobs.png'
 import miner from '../Assets/Projects/miner.png'
 import ivy from '../Assets/Projects/ivy.png'
 import nft from '../Assets/Projects/nft.png'
@@ -20,7 +23,8 @@ export const projects: Project[] = [
     impact:
       'Gives sales teams a single system to go from a plain-language ask to a qualified, contacted, and tracked lead — with call-connection rate, email success rate, and meetings booked all measured automatically on a built-in analytics dashboard instead of assembled by hand across disconnected tools.',
     storyLayout: true,
-    image: null,
+    image: stackleadAnalytics,
+    additionalImages: [stackleadCampaigns, stackleadJobs],
     demoUrl: 'https://stacklead.net/',
     demoLabel: 'Live Product',
   },

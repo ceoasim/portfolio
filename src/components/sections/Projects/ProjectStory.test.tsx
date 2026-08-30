@@ -51,4 +51,24 @@ describe('ProjectStory', () => {
     render(<ProjectStory project={baseProject} />)
     expect(screen.getByRole('link', { name: /live product/i })).toHaveAttribute('href', 'https://example.com')
   })
+
+  it('renders no additional screenshots when additionalImages is absent', () => {
+    render(<ProjectStory project={baseProject} />)
+    expect(screen.queryAllByRole('img')).toHaveLength(0)
+  })
+
+  it('renders every additional screenshot when additionalImages is provided', () => {
+    render(
+      <ProjectStory
+        project={{ ...baseProject, image: '/fake-image.png', additionalImages: ['/extra-1.png', '/extra-2.png'] }}
+      />,
+    )
+    const images = screen.getAllByRole('img', { name: `${baseProject.name} screenshot` })
+    expect(images).toHaveLength(3)
+    expect(images.map((img) => img.getAttribute('src'))).toEqual([
+      '/fake-image.png',
+      '/extra-1.png',
+      '/extra-2.png',
+    ])
+  })
 })

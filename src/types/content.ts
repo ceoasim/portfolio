@@ -43,6 +43,7 @@ export interface Project {
   impact: string | null
   storyLayout: boolean
   image: string | null
+  additionalImages?: string[]
   demoUrl: string | null
   demoLabel: string | null
 }
