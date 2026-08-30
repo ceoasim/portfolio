@@ -2,6 +2,7 @@ import { MotionConfig } from 'framer-motion'
 import Navbar from './components/layout/Navbar.js'
 import Footer from './components/layout/Footer.js'
 import Hero from './components/sections/Hero/index.js'
+import TechMarquee from './components/ui/TechMarquee.js'
 import Snapshot from './components/sections/Snapshot/index.js'
 import Skills from './components/sections/Skills/index.js'
 import Projects from './components/sections/Projects/index.js'
@@ -16,13 +17,14 @@ function App() {
     <MotionConfig reducedMotion="user">
       <a
         href="#hero"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-surface focus:text-primary focus:p-4"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-surface focus:text-ink focus:p-4"
       >
         Skip to content
       </a>
       <Navbar />
       <main>
         <Hero />
+        <TechMarquee />
         <Snapshot />
         <Skills />
         <Projects />

@@ -25,6 +25,15 @@ export default {
       backgroundImage: {
         'gradient-accent': 'linear-gradient(90deg, #8b7bff, #25c9d0)',
       },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      },
     },
   },
   plugins: [],
