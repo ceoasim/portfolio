@@ -34,6 +34,7 @@ This project was built using these technologies.
 
 - Vite
 - React 18
+- TypeScript
 - Tailwind CSS
 - Framer Motion
 - Vercel
@@ -45,6 +46,8 @@ This project was built using these technologies.
 **🎨 Styled with Tailwind CSS, animated with Framer Motion**
 
 **📱 Fully Responsive**
+
+**🔷 Written in TypeScript**
 
 ## Getting Started
 
