@@ -4,14 +4,12 @@ import { FaLinkedinIn } from 'react-icons/fa'
 import { MdOutlineEmail } from 'react-icons/md'
 import { profile } from '../../../data/profile.js'
 import MagneticButton from '../../ui/MagneticButton.js'
-import AmbientGlow from '../../ui/AmbientGlow.jsx'
 import HeroVisual from './HeroVisual.js'
 import resumePdf from '../../../Assets/muhammad_asim_resume.pdf'
 
 function Hero() {
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24">
-      <AmbientGlow />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
         <div>
           <p className="font-mono text-sm text-muted">{profile.location}</p>
