@@ -13,15 +13,18 @@ function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-subtle bg-base/80 backdrop-blur">
+    <header className="fixed top-0 z-50 w-full border-b border-border bg-paper/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="font-mono text-sm font-semibold text-primary">
-          MA
+        <a href="#" className="font-serif text-lg font-semibold text-ink">
+          Muhammad Asim
         </a>
         <ul className="hidden gap-6 md:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="text-sm text-muted transition-colors hover:text-primary">
+              <a
+                href={link.href}
+                className="font-mono text-xs uppercase tracking-wide text-muted transition-colors hover:text-accent"
+              >
                 {link.label}
               </a>
             </li>
@@ -33,7 +36,7 @@ function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-nav-menu"
           onClick={() => setOpen((o) => !o)}
-          className="text-primary md:hidden"
+          className="font-mono text-xs uppercase tracking-wide text-ink md:hidden"
         >
           {open ? 'Close' : 'Menu'}
         </button>
@@ -42,14 +45,14 @@ function Navbar() {
         <ul
           id="mobile-nav-menu"
           data-testid="mobile-menu"
-          className="flex flex-col gap-4 border-t border-subtle px-6 py-4 md:hidden"
+          className="flex flex-col gap-4 border-t border-border px-6 py-4 md:hidden"
         >
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block text-sm text-muted hover:text-primary"
+                className="block font-mono text-xs uppercase tracking-wide text-muted hover:text-accent"
               >
                 {link.label}
               </a>
