@@ -11,7 +11,6 @@ describe('content data', () => {
     expect(profile.linkedin).toBe('https://linkedin.com/in/ceoasim')
     expect(profile.github).toBe('https://github.com/ceoasim')
     expect(profile.githubUsername).toBe('ceoasim')
-    expect(profile.typewriterStrings.length).toBeGreaterThan(0)
     expect(profile.stats).toHaveLength(4)
   })
 

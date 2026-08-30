@@ -1,52 +1,50 @@
-import Typewriter from 'typewriter-effect'
 import { AiFillGithub } from 'react-icons/ai'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { MdOutlineEmail } from 'react-icons/md'
 import { profile } from '../../../data/profile.js'
 import MagneticButton from '../../ui/MagneticButton.js'
-import HeroVisual from './HeroVisual.js'
 import resumePdf from '../../../Assets/muhammad_asim_resume.pdf'
+import profilePhoto from '../../../Assets/profile.jpg'
 
 function Hero() {
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24">
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.3fr_0.9fr]">
         <div>
-          <p className="font-mono text-sm text-muted">{profile.location}</p>
-          <h1 className="mt-4 text-4xl font-bold sm:text-5xl">{profile.name}</h1>
-          <h2 className="mt-2 text-xl text-muted sm:text-2xl">
-            Senior Software Engineer —{' '}
-            <span className="bg-gradient-accent bg-clip-text text-transparent">AI-Native</span> Full-Stack
-            Development
-          </h2>
-          <div className="mt-4 h-8 font-mono text-lg text-accent-cyan">
-            <Typewriter
-              options={{ strings: profile.typewriterStrings, autoStart: true, loop: true, deleteSpeed: 30 }}
-            />
-          </div>
-          <p className="mt-6 max-w-xl text-muted">{profile.heroValueProp}</p>
+          <p className="font-mono text-xs uppercase tracking-wide text-accent">Senior Software Engineer</p>
+          <h1 className="mt-4 font-serif text-5xl font-normal leading-[0.98] text-ink sm:text-6xl">
+            {profile.name}
+          </h1>
+          <p className="mt-3 text-lg text-muted">AI-Native Full-Stack Development</p>
+          <p className="mt-6 max-w-xl text-ink">{profile.heroValueProp}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <MagneticButton href="#projects" variant="primary">
-              View My Work
+              View Projects
             </MagneticButton>
-            <MagneticButton href={resumePdf} variant="secondary" download="Muhammad_Asim_Resume.pdf">
-              Download Resume
+            <MagneticButton href={resumePdf} variant="secondary" target="_blank" rel="noreferrer">
+              View Resume
             </MagneticButton>
           </div>
           <div className="mt-8 flex gap-4 text-xl text-muted">
-            <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-primary">
+            <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-accent">
               <AiFillGithub />
             </a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-primary">
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-accent">
               <FaLinkedinIn />
             </a>
-            <a href={`mailto:${profile.email}`} aria-label="Email" className="hover:text-primary">
+            <a href={`mailto:${profile.email}`} aria-label="Email" className="hover:text-accent">
               <MdOutlineEmail />
             </a>
           </div>
         </div>
-        <div className="flex justify-center">
-          <HeroVisual />
+        <div>
+          <img
+            src={profilePhoto}
+            alt={profile.name}
+            className="aspect-[4/5] w-full rounded-lg border border-border object-cover"
+            style={{ filter: 'sepia(0.15) contrast(1.02)' }}
+          />
+          <p className="mt-3 font-mono text-xs text-muted">{profile.location}</p>
         </div>
       </div>
     </section>

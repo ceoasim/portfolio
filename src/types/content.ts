@@ -13,7 +13,6 @@ export interface Profile {
   githubUsername: string
   heroValueProp: string
   snapshotSupportingCopy: string
-  typewriterStrings: string[]
   stats: Stat[]
 }
 
