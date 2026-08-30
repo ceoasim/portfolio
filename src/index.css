@@ -13,5 +13,5 @@ html {
 }
 
 body {
-  @apply bg-base text-primary font-sans antialiased;
+  @apply bg-paper text-ink font-sans antialiased;
 }
