@@ -35,7 +35,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           href={project.demoUrl}
           target="_blank"
           rel="noreferrer"
-          className="mt-3 inline-block text-sm font-semibold text-accent hover:underline"
+          className="mt-3 inline-block text-sm font-semibold text-accent-green hover:underline"
         >
           {project.demoLabel} →
         </a>

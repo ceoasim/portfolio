@@ -43,7 +43,7 @@ function Hero() {
             alt={profile.name}
             fetchPriority="high"
             className="aspect-[4/5] w-full rounded-lg border border-border object-cover"
-            style={{ filter: 'sepia(0.15) contrast(1.02)' }}
+            style={{ filter: 'contrast(1.08) saturate(1.05)' }}
           />
           <p className="mt-3 font-mono text-xs text-muted">{profile.location}</p>
         </div>
