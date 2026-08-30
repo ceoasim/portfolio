@@ -7,7 +7,7 @@ function Contact() {
   return (
     <SectionReveal as="section" className="px-6 py-24">
       <div id="contact" className="mx-auto max-w-2xl scroll-mt-24 text-center">
-        <h2 className="text-3xl font-bold">Let's build something impactful.</h2>
+        <h2 className="font-serif text-4xl font-normal text-ink">Let's build something impactful.</h2>
         <p className="mt-3 text-muted">{profile.location} — reach out any time.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <MagneticButton href={`mailto:${profile.email}`} variant="primary">
