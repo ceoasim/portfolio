@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import { computeMagneticOffset } from './magneticOffset.js'
 
 const base =
-  'inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-shadow'
+  'inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-colors'
 const variants = {
-  primary: 'bg-gradient-accent text-base',
-  secondary: 'border border-subtle text-primary',
+  primary: 'bg-accent text-paper hover:bg-ink',
+  secondary: 'border border-border text-ink hover:border-accent',
 }
 
 interface MagneticButtonProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'onAnimationStart' | 'onDrag' | 'onDragEnd' | 'onDragStart'> {
