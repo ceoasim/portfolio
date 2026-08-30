@@ -7,20 +7,22 @@ import shift from '../Assets/Projects/shift.png'
 
 export const projects: Project[] = [
   {
-    id: 'anywork-agent',
-    name: 'AnyWork Agent',
+    id: 'stacklead',
+    name: 'StackLead',
     company: 'SMS Holdings',
-    tags: ['React.js', 'Node.js', 'LLM APIs', 'Voice AI', 'Email Automation'],
+    tags: ['React.js', 'Node.js', 'LLM APIs', 'Voice AI', 'Email Automation', 'Agentic Workflows'],
     problem:
-      'Turning a natural-language prompt into a qualified lead list and outreach campaign without manual prospecting.',
+      'Sales teams drown in unqualified leads and manual, multi-tool prospecting — there was no single system to find, validate, contact, and track leads through to a booked meeting.',
     description:
-      'Conversational AI agent that discovers leads, generates a campaign, places AI voice calls, and sequences automated emails.',
+      "A conversational AI chatbot lets reps query and analyze lead data in plain language, kicking off a trackable background job that searches and enriches results in real time. Underneath, an agentic pipeline handles lead discovery, deduplication, and campaign creation, then places AI voice calls to understand a lead's interests and sequences automated email outreach — with Calendly-based meeting booking and CSV/PDF export throughout.",
     architectureHighlight:
-      'Agentic tool-calling workflow spanning lead discovery, campaign generation, AI voice calling, and automated email sequencing — with human approval gates before any outbound action.',
-    featured: true,
+      'A modular full-stack platform (AI Chatbot, Campaigns, Contacts, Jobs, Analytics) built around an asynchronous job pipeline — search, validation, deduplication, and campaign-creation stages tracked in real time on a live Jobs dashboard — with LLM-backed natural-language querying, AI voice calling, and automated email sequencing orchestrated through tool-calling workflows.',
+    impact:
+      'Gives sales teams a single system to go from a plain-language ask to a qualified, contacted, and tracked lead — with call-connection rate, email success rate, and meetings booked all measured automatically on a built-in analytics dashboard instead of assembled by hand across disconnected tools.',
+    storyLayout: true,
     image: null,
-    demoUrl: null,
-    demoLabel: null,
+    demoUrl: 'https://stacklead.net/',
+    demoLabel: 'Live Product',
   },
   {
     id: 'mindminer',
@@ -33,7 +35,9 @@ export const projects: Project[] = [
       'AI-assisted invention platform generating candidate solutions and drafting structured patent documentation via LLM pipelines, with automated multimedia explainer videos per invention.',
     architectureHighlight:
       'Web3 layer with wallet balances, on-chain burns, ERC-20/NFT transfers, crowdfunding contracts, and token minting — secure multi-step authenticated transactions with blockchain event verification.',
-    featured: true,
+    impact:
+      'Collapses invention documentation from concept to structured, patent-ready drafts — with an automated video explainer generated for every submission.',
+    storyLayout: true,
     image: miner,
     demoUrl: 'https://dev.mindminer.ai/',
     demoLabel: 'Demo',
@@ -47,7 +51,8 @@ export const projects: Project[] = [
     description:
       'Mobile and web platform for on-demand household services, with an integrated admin panel for customer/partner monitoring and in-app commissioning support.',
     architectureHighlight: null,
-    featured: false,
+    impact: null,
+    storyLayout: false,
     image: null,
     demoUrl: null,
     demoLabel: null,
@@ -61,7 +66,8 @@ export const projects: Project[] = [
     description:
       'Hospitality platform covering guest booking, task orchestration, SMS notifications, and an activity management system that improved staff task completion.',
     architectureHighlight: null,
-    featured: false,
+    impact: null,
+    storyLayout: false,
     image: ivy,
     demoUrl: 'https://www.revinate.com/solutions/revinate-ivy/',
     demoLabel: 'Learn more',
@@ -75,7 +81,8 @@ export const projects: Project[] = [
     description:
       'NFT management platform handling contract addresses and wallet transactions, optimized for speed and cross-device responsiveness.',
     architectureHighlight: null,
-    featured: false,
+    impact: null,
+    storyLayout: false,
     image: nft,
     demoUrl: 'https://smeisty.app/',
     demoLabel: 'Demo',
@@ -89,7 +96,8 @@ export const projects: Project[] = [
     description:
       'Augmented reality app for smartphones — people can see through their camera how new doors would look directly in their interior.',
     architectureHighlight: null,
-    featured: false,
+    impact: null,
+    storyLayout: false,
     image: door,
     demoUrl: 'https://www.door-visualizer.com/',
     demoLabel: 'Demo',
@@ -103,7 +111,8 @@ export const projects: Project[] = [
     description:
       'First fully integrated end-to-end ERP solution for co-packers and supply chain teams.',
     architectureHighlight: null,
-    featured: false,
+    impact: null,
+    storyLayout: false,
     image: shift,
     demoUrl: 'https://www.shifterp.com/',
     demoLabel: 'Demo',

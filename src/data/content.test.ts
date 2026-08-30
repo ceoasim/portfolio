@@ -26,11 +26,12 @@ describe('content data', () => {
     })
   })
 
-  it('projects has exactly 7 entries with 2 featured', () => {
+  it('projects has exactly 7 entries with 2 story-layout case studies', () => {
     expect(projects).toHaveLength(7)
-    const featured = projects.filter((p) => p.featured)
-    expect(featured).toHaveLength(2)
-    expect(featured.map((p) => p.id).sort()).toEqual(['anywork-agent', 'mindminer'])
+    const stories = projects.filter((p) => p.storyLayout)
+    expect(stories).toHaveLength(2)
+    expect(stories.map((p) => p.id).sort()).toEqual(['mindminer', 'stacklead'])
+    stories.forEach((p) => expect(p.impact).toBeTruthy())
     projects.forEach((p) => {
       expect(p.tags.length).toBeGreaterThan(0)
       expect(p.description).toBeTruthy()

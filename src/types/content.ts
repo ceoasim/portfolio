@@ -40,7 +40,8 @@ export interface Project {
   problem: string | null
   description: string
   architectureHighlight: string | null
-  featured: boolean
+  impact: string | null
+  storyLayout: boolean
   image: string | null
   demoUrl: string | null
   demoLabel: string | null

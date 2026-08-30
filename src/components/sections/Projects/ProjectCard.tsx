@@ -21,7 +21,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       ) : (
         <AbstractProjectVisual tags={project.tags} />
       )}
-      <h3 className="mt-4 text-lg font-bold">{project.name}</h3>
+      <h3 className="mt-4 font-serif text-lg font-normal text-ink">{project.name}</h3>
       <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
       {project.image && (
         <div className="mt-3 flex flex-wrap gap-2">
@@ -35,7 +35,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           href={project.demoUrl}
           target="_blank"
           rel="noreferrer"
-          className="mt-3 inline-block text-sm font-semibold text-accent-cyan hover:underline"
+          className="mt-3 inline-block text-sm font-semibold text-accent hover:underline"
         >
           {project.demoLabel} →
         </a>
