@@ -21,7 +21,7 @@ function SectionReveal({ as = 'div', className = '', delay = 0, children }: Sect
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0 }}
       transition={{ duration: 0.5, delay, ease: 'easeOut' }}
     >
       {children}
